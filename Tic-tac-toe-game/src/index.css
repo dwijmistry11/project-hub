@@ -1,0 +1,133 @@
+body {
+    font: 14px "Comfortaa", cursive, sans-serif;
+    background-color: #091d34;
+}
+
+.root{
+    width: 80vw;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: #091d34;
+    display: flex;
+    font-family: "Comfortaa", cursive;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+ol,
+ul {
+    padding-left: 30px;
+    list-style: none;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.status {
+    color: #f0832f;
+    font-size: 30px;
+}
+
+.square {
+    background-color: #f0832f;
+    float: left;
+    font-size: 60px;
+    line-height: 100px;
+    height: 100px;
+    width: 100px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    border: 2px solid #236ab9;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;    
+}
+
+.square:focus {
+    outline: none;
+}
+
+.kbd-navigation .square:focus {
+    background: #ddd;
+}
+
+.game {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
+    height: 50%;
+    background-color: #236ab9;
+    align-items: stretch;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.game-board {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-info {
+    width: 30%;
+    height: 100%;
+    border-left: 1px solid orange;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.reset{
+    background-color: green;
+    border: none;
+    padding: 10px;
+    width: 70%;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.reset:hover{
+    background-color: rgb(43, 184, 43);
+}
+
+
+@media screen and (max-width: 600px) {
+    .square {
+        font-size: 40px;
+        line-height: 70px;
+        height: 70px;
+        width: 70px;
+            
+    }
+    .game {
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .game-board {
+        width: 100%;
+        height: 50%;
+    }
+        
+    .game-info {
+        width: 100%;
+        height: 50%;
+        border-left: none;
+        border-top: 1px solid orange;
+        padding-top: 20px;
+    }
+    
+}
