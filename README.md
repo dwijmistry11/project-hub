@@ -11,7 +11,7 @@ Submit your working project for open source use.
 6. create readme.md
 7. add details of your project in readme.md
 8. write requirement and steps of how to reproduce the output in readme.md
-9. push it on issue named branch.
+9. push it on issue named branch or create new branch if issue is not listed.
 10. create merge request.
 
 
