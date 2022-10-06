@@ -1,0 +1,165 @@
+//Unit Convertor Project = (Temperature, Currency and Mass)
+
+#include<stdio.h>
+
+float Temperature(void);
+void Currency(void);
+void Mass(void);
+
+int main(){
+    int op;
+    printf("\n--------------Unit Convertor Project--------------\n");
+
+    printf("\nSelect What You Want to Convert : \n");
+    printf("1. Temperture\n2. Currency\n3. Mass\nEnter : ");
+    scanf("%d",&op);
+
+    switch (op)
+    {
+    case 1:
+        printf("\n**Temperature**\n");
+        Temperature();      //function call
+        break;
+    case 2:
+        printf("\n**Currency**\n");
+        Currency();         //function call     
+        break;
+    case 3:
+        printf("\n**Mass**\n");
+        Mass();             //function call
+        break;
+    default:
+        printf("Enter a Valid Input\n");
+        break;
+    }
+    return 0;
+}
+
+
+float Temperature(void){    //function over temperature conversion
+    float f , c;
+    int op, i=0;
+    
+    while (i < 1){
+
+        printf("\nSelect Option : \n1) Celsius to Fahrenheit\n2) Fahrenheit to Celsius\n");
+        scanf("%d",&op);
+        
+        if (op == 1)
+        {
+            printf("\nEnter Temperature in Celsius : ");
+            scanf("%f",&c);
+            f = (c * 9 / 5) + 32;
+            printf("Temperature in Fahrenheit : %.2f\n",f);
+        }
+        else if (op == 2)
+        {
+            printf("\nEnter Temperature in Fahrenheit : ");
+            scanf("%f",&f);
+            c = ((f - 32) * 5)/9;
+            printf("Temperature in Celsius : %.2f\n",c);
+        }
+        else
+        {
+            printf("Enter a Valid Input\n");
+            continue;
+        }
+    }
+}
+
+
+void Currency(void)         //function for currency conversion
+{
+  float amount, rupee, dollar, pound, euro;
+  int choice;
+ 
+  printf("Following are the Choices: \nEnter 1: Ruppee\nEnter 2: Dollar\nEnter 3: Pound\nEnter 4: Euro\n");
+
+  printf("\nEnter your choice: ");
+  scanf("%d", &choice);
+ 
+  printf("Enter the amount you want to convert?\n");
+  scanf("%f", &amount);
+ 
+  printf("\n");
+
+  //Conversions Last Updated on October 6, 2022.(17:16 UTC)       
+  switch (choice)
+  {
+    case 1: // Rupee Conversion
+        dollar = amount / 82.144112;
+        printf("%.2f Rupees =  %.2f dollars", amount, dollar);
+ 
+        pound = amount / 91.547238;
+        printf("\n%.2f Rupees =  %.2f pounds", amount, pound);
+ 
+        euro = amount / 80.533903;
+        printf("\n%.2f Rupees =  %.2f euros", amount, euro);
+        break;
+ 
+    case 2: // Dollar Conversion
+        rupee = amount * 82.160629;
+        printf("\n%.2f Dollars =  %.2f rupees", amount, rupee);
+ 
+        pound = amount *0.89692018;
+        printf("\n%.2f Dollars =  %.2f pounds", amount, pound);
+ 
+        euro = amount *1.0199732;
+        printf("\n%.2f Dollars =  %.2f euros", amount, euro);
+        break;
+ 
+    case 3: // Pound Conversion
+        rupee = amount * 91.578364;
+        printf("\n%.2f Pounds =  %.2f rupees", amount, rupee);
+ 
+        dollar = amount *1.1149858;
+        printf("\n%.2f Pounds =  %.2f dollars", amount, dollar);
+ 
+        euro = amount *1.137195;
+        printf("\n%.2f Pounds =  %.2f euros", amount, euro);
+        break;
+ 
+    case 4: // Euro Conversion
+        rupee = amount * 80.529503;
+        printf("\n%.2f Euros =  %.2f rupees", amount, rupee);
+ 
+        dollar = amount *0.98046358;
+        printf("\n%.2f Euros =  %.2f dollars", amount, dollar);
+ 
+        pound = amount *0.8793767;
+        printf("\n%.2f Euros =  %.2f pounds", amount, pound);
+        break;
+ 
+     //Default case
+    default:
+        printf("\nInvalid Input");
+        break;
+  }
+}
+
+void Mass(void)         //function for Mass Conversion
+{  
+    const float POUND = 2.20462;  
+    float kg;
+    int choice;  
+    
+    printf("\nFollowing are the Choices: \nEnter 1: Kilogram \nEnter 2: Pound\n");
+    scanf("%d",&choice);
+
+    switch (choice)
+    {
+    case 1:
+        printf("Enter weight in Kilograms\n");  
+        scanf("%f", &kg);  
+        printf("Weight in Pounds is %f\n", (kg * POUND));       
+        break;
+    case 2:
+        printf("Enter weight in Pounds\n");  
+        scanf("%f", &kg);  
+        printf("Weight in Kilograms is %f\n", (kg / POUND));
+        break;
+    default:
+        printf("Enter a Valid Choice\n");
+        break;
+    }
+}  
