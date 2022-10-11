@@ -1,0 +1,14 @@
+# Input And Output
+- Enter an operator (+, -, *, /), if want to exit press x: +
+- Enter two first and second number: 7 8
+- 7.0 + 8.0 = 15.0
+- Enter an operator (+, -, *, /), if want to exit press x: -
+- Enter two first and second number: 8 9
+- 8.0 - 9.0 = -1.0
+- Enter an operator (+, -, *, /), if want to exit press x: *
+- Enter two first and second number: 8 7
+- 8.0 * 7.0 = 56.0
+- Enter an operator (+, -, *, /), if want to exit press x: /
+- Enter two first and second number: 8 3
+- 8.0 / 3.0 = 2.7
+- Enter an operator (+, -, *, /), if want to exit press x: x
